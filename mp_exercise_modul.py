@@ -43,7 +43,6 @@ def mp_stream(cap, exercise, counter, phase) -> None:
 
             landmarks = results.pose_landmarks.landmark
 
-            # ovdje se poziva funkcija za vjezbu
             func = getattr(mem, exercise)
             counter, phase  = func(image, landmarks, counter, phase)
 
