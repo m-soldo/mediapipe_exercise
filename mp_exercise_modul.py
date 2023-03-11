@@ -33,7 +33,6 @@ def mp_stream(cap, exercise, counter, phase) -> None:
             ret, frame = cap.read()
 
             image = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
-            # False znaci read only (array je nepromjenjiv u memoriji)
             image.flags.writeable = False
 
             results = pose.process(image)
