@@ -5,7 +5,8 @@ The human body is detected using mediapipe solutions from the mediapipe library.
 
 Exercises covered so far are pullups, pushups and squats.
 
-Pullup:
+PULLUP:
+
 ![count_pullup](https://user-images.githubusercontent.com/100207531/224478501-c78f3cf1-1206-4841-b5ce-1ae0800b5aca.gif)
 
 The algorithm is primarily focused on shoulder, elbow and wrist points from mediapipe pose solution. It uses those points to calculate the angle between the forearm and upper arm, then compares them to hardcoded thresholds to determine phase -> should one go up or down. After one full range of motion has been completed, the counter will be enlarged by one. Both phase and count are outputed on the video stream. 
