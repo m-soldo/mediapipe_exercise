@@ -137,11 +137,3 @@ def squat(image, landmarks, counter, phase) -> tuple[float, str]:
         return counter, phase 
     except:
         pass
-
-
-
-
- # cv.putText(image, str(angle),
-        #             tuple(np.multiply(elbow, [width, height]).astype(int)),
-        #             cv.FONT_HERSHEY_PLAIN, 1.5, (0, 0, 255), 1, cv.LINE_AA
-        #             )
