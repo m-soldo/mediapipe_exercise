@@ -52,8 +52,8 @@ def mp_stream(cap, exercise, counter, phase) -> None:
 
 def pullup(image, landmarks, counter, phase) -> tuple[float, str]:
     """This function, if specified is called automaticaly by mp_stream function.\n 
-    It tracks and returns count and phase for given exercise and also outputs \n
-    those values as well as the relevant angle for given exercise onto video stream"""
+    It tracks and returns count and phase for given exercise and outputs\n
+    those values onto video stream"""
 
     try:
         shoulder = [landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].x,
@@ -81,8 +81,8 @@ def pullup(image, landmarks, counter, phase) -> tuple[float, str]:
 
 def pushup(image, landmarks, counter, phase) -> tuple[float, str]:
     """This function, if specified is called automaticaly by mp_stream function.\n 
-    It tracks and returns count and phase for given exercise and also outputs \n
-    those values as well as the relevant angle for given exercise onto video stream"""
+    It tracks and returns count and phase for given exercise and outputs\n
+    those values onto video stream"""
     
     try:
         shoulder = [landmarks[mp_pose.PoseLandmark.RIGHT_SHOULDER.value].x,
@@ -110,8 +110,8 @@ def pushup(image, landmarks, counter, phase) -> tuple[float, str]:
 
 def squat(image, landmarks, counter, phase) -> tuple[float, str]:
     """This function, if specified is called automaticaly by mp_stream function.\n 
-    It tracks and returns count and phase for given exercise and also outputs \n
-    those values as well as the relevant angle for given exercise onto video stream"""
+    It tracks and returns count and phase for given exercise and outputs\n
+    those values onto video stream"""
     
     try:
         shoulder = [landmarks[mp_pose.PoseLandmark.RIGHT_HIP.value].x,
