@@ -6,8 +6,8 @@ The human body is detected using mediapipe solutions from the mediapipe library.
 Exercises covered so far are pullups, pushups and squats.
 
 ## How to use:
-  1.) Create Python venv from reyuirments.txt
-  2.) In the run.py file, as an argument for the VideoCapture method, in 'cap' variable, give a path for the video you want to process, or use 0 for webcam (if you have multiple cameras connected to your hardware, it may be a different int). Then run run.py.
+    1.) Create Python venv from reyuirments.txt
+    2.) In the run.py file, as an argument for the VideoCapture method, in 'cap' variable, give a path for the video you want to process, or use 0 for webcam (if you have multiple cameras connected to your hardware, it may be a different int). Then run run.py.
 
 ### Pullup:
 
