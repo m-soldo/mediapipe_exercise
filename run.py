@@ -1,7 +1,7 @@
 import cv2 as cv
 import videoStream as vs
 
-# give wanted video path as an argument or 0 for webcam
+# give video path as an argument or int for webcam port (most likely 0, possible higher int if you have multiple cams)
 cap = cv.VideoCapture('some_folder/some_video.mp4')
 # name of the exercise, must be pullup, pushup or squat
 exercise = 'pullup'
