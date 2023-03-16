@@ -1,7 +1,7 @@
 import mediapipe as mp
 import numpy as np
 import cv2 as cv
-import exerc_modul as em
+import exercises as ex
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
@@ -29,7 +29,7 @@ def mp_stream(cap, exercise, counter, phase) -> None:
             landmarks = results.pose_landmarks.landmark
 
             # ovdje se poziva funkcija za vjezbu
-            func = getattr(em, exercise)
+            func = getattr(ex, exercise)
             counter, phase  = func(image, landmarks, counter, phase)
 
             cv.imshow(exercise.capitalize(), image)
