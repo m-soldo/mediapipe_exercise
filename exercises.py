@@ -21,35 +21,6 @@ def calc_angle(a: list, b: list, c: list) -> float:
     return angle
 
 
-def mp_stream(cap, exercise, counter, phase) -> None:
-    """Starts video stream with mediapipe pose solution.
-    
-       `cap`: ocv video capture object (video path, 0 for web cam)
-       `exercise`: name of the desired exercise, will call according exercise function based on given name 
-       `counter`, `phase`: produced automaticaly in the main script, exercise counter and phase  
-    """
-    with mp_pose.Pose(smooth_landmarks=True, min_detection_confidence=0.5, min_tracking_confidence=0.5) as pose:
-        while cap.isOpened():
-            ret, frame = cap.read()
-
-            image = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
-            image.flags.writeable = False
-
-            results = pose.process(image)
-
-            image.flags.writeable = True
-            image = cv.cvtColor(image, cv.COLOR_RGB2BGR)
-
-            landmarks = results.pose_landmarks.landmark
-
-            func = getattr(mem, exercise)
-            counter, phase  = func(image, landmarks, counter, phase)
-
-            cv.imshow(exercise.capitalize(), image)
-            if cv.waitKey(1) & 0xFF == 27:
-                break
-
-
 def pullup(image, landmarks, counter, phase) -> tuple[float, str]:
     """This function, if specified is called automaticaly by mp_stream function.\n 
     It tracks and returns count and phase for given exercise and outputs\n
