@@ -11,6 +11,7 @@ Exercises covered so far are pullups, pushups and squats.
   
   2.) In the run.py file, as an argument for the VideoCapture method, in 'cap' variable, give a path for the video you want to process, or use 0 for webcam (if you           have multiple cameras connected to your hardware, it may be a different int). Then run run.py.
 
+
 ### Pullup:
 
    ![count_pullup](https://user-images.githubusercontent.com/100207531/224478501-c78f3cf1-1206-4841-b5ce-1ae0800b5aca.gif)
