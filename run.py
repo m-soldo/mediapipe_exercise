@@ -1,5 +1,5 @@
 import cv2 as cv
-import mp_exercise_modul as mem
+import videoStream as vs
 
 # give wanted video path as an argument or 0 for webcam
 cap = cv.VideoCapture('some_folder/some_video.mp4')
@@ -18,7 +18,7 @@ elif exercise.lower() == 'squat':
 else:
     raise AttributeError("You have chosen an invalid exercise")    
 
-mem.mp_stream(cap, exercise, counter, phase)
+vs.mp_stream(cap, exercise, counter, phase)
 
 cap.release()
 cv.destroyAllWindows()    
