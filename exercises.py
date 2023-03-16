@@ -1,7 +1,6 @@
 import mediapipe as mp
 import numpy as np
 import cv2 as cv
-import mp_exercise_modul as mem
 
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
